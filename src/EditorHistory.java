@@ -56,6 +56,7 @@ public class EditorHistory<T> implements HistoryStack<T> {
     void makeChange(String newState){
         push((T) currentState);
         currentState = newState;
+        redoIndex = 0;
 
     }
 
